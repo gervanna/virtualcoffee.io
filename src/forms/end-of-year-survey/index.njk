@@ -1,0 +1,126 @@
+---
+layout: layouts/default.njk
+title: We'd love to hear what you think about Virtual Coffee!
+description: 
+permalink: /end-of-year-survey/
+---
+
+{% from "macros/forms.njk" import netlifyForm %}
+
+
+<div class="py-5">
+  <div class="container bodycopy">
+    <h1>Report a Code of Conduct Violation</h1>
+    <div class="lead mb-5">
+      <p>Virtual Coffee has grown from a once a week coffee chat into an amazing community of people. As we look forward to growing and trying new things in 2021, we want to take some time to reflect on everything we've done this year.</p>
+      <p>We value your openness and we'll still accept your survey if you wish to remain anonymous.</p>
+    </div>
+    {% call netlifyForm('/end-of-year-survey/thanks/', 'end-of-year-survey') %}
+
+      <fieldset>
+        <div class="form-group">
+          <label for="formName">Your Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="formName"
+            name="name"
+            aria-describedby="nameHelp"
+          />
+          <small id="nameHelp" class="form-text text-muted">Optional, skip if you wish to remain anonymous</small>
+        </div>
+        <div class="form-group">
+          <label for="formEmail">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="formEmail"
+            name="email"
+            aria-describedby="emailHelp"
+          />
+          <small id="emailHelp" class="form-text text-muted">Optional, skip if you wish to remain anonymous</small>
+        </div>
+        <div class="form-group">
+          <label for="startedVC">When did you first start coming to Virtual Coffee (approximate is fine)?</label>
+          <input
+            type="text"
+            class="form-control"
+            id="startedVC"
+            name="startedVC"
+            required
+            aria-describedby="startedVC"
+          />
+          <small id="startedVC" class="form-text text-muted">Required</small>
+        </div>
+        <div class="form-group">
+          <label for="time">How has your experience with our Tuesday/Thursday Virtual Coffees been? (If you have primarily attended one day, please let us know and include your likes and dislikes.)</label>
+          <input
+            type="text"
+            class="form-control"
+            id="time"
+            name="time"
+            aria-describedby="timeHelp"
+          />
+        </div>
+
+              <div class="form-group">
+          <label for="describe-VC">If you could describe Virtual Coffee in a sentence or two, what would you say?</label>
+          <textarea class="form-control" id="describe-VC" name="describe-VC" rows="2"></textarea>
+        </div>
+         <div class="form-group">
+          <label for="fav-VC">What has been your favorite part of Virtual Coffee?</label>
+          <textarea class="form-control" id="fav-VC" name="fav-VC" rows="2"></textarea>
+        </div>
+
+            <div class="form-group">
+<p class="lead">Which events have you attended live?</p>
+
+    <label class="form-group form-check">
+      <input type="checkbox" name="interview" class="form-check-input"  value="interview">
+      <span class="form-check-label">Interview Series</span>
+    </label>
+    <label class="form-group form-check">
+
+      <input type="checkbox" name="happy-hour" class="form-check-input"  value="happy-hour">
+      <span class="form-check-label">Happy Hour?</span>
+    </label>    <label class="form-group form-check">
+
+      <input type="checkbox" name="brownbag" class="form-check-input"  value="brownbag"><span class="form-check-label">Brownbag session</span>
+    </label>    <label class="form-group form-check">
+
+      <input type="checkbox" name="v-chi" class="form-check-input" value="v-chi"><span class="form-check-label">Virtual Coffee Hacktoberfest Initiative</span>
+    </label>
+       
+       <input type="checkbox" name="lightning-talks" class="form-check-input"  value="lightning-talks"><span class="form-check-label">Lightning Talks</span>
+    </label>
+    </label>
+    </div>
+         <div class="form-group">
+          <label for="brownbag-specifics">If you attended a brownbag, which one(s) and what was your experience?</label>
+          <textarea class="form-control" id="brownbag-specifics" name="brownbag-specifics" rows="3"></textarea>
+        </div><div class="form-group">
+          <label for="favEvents">What events were your favorite? Please describe why.</label>
+          <textarea class="form-control" id="favEvents" name="favEvents" rows="6"></textarea>
+        </div>
+         <div class="form-group">
+          <label for="improve-events">How could we improve any of the events?</label>
+          <textarea class="form-control" id="improve-events" name="improve-events" rows="6"></textarea>
+        </div>
+         <div class="form-group">
+          <label for="future">What are some things you'd like to see in 2021?</label>
+          <textarea class="form-control" id="future" name="future" rows="6"></textarea>
+        </div>
+       </div> 
+        </div>
+  
+       
+      </fieldset>
+
+      <div class="text-right">
+        <button type="submit" class="btn btn-primary btn-lg">Submit Survey</button>
+      </div>
+
+
+    {% endcall %}
+  </div>
+</div>
